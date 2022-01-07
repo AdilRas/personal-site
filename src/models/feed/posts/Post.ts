@@ -1,8 +1,3 @@
-interface Company {
-    name: string;
-    logoImgSrc: string;
-}
-
 interface PostHeader {
     name: string;
     logoSrc: string;
@@ -10,17 +5,29 @@ interface PostHeader {
 
 interface Post {
     // unique identifier
-    id: string;
+    readonly id: string;
     // header
-    postHeader: PostHeader;
+    readonly postHeader: PostHeader;
     // content
-    contentImgSrc: string;
+    readonly contentImgSrc: string;
     // caption
-    nameForCaption: string;
-    captionText: string;
-    hashtags: string[] | null;
+    readonly nameForCaption: string;
+    readonly captionText: string;
+    readonly hashtags?: string[];
     // comments
-    comments: string[] | null;
+    readonly comments?: string[];
+}
+
+interface PostBuilderFunc {
+    (): Post;
+}
+interface PostBuilder {
+    toPost: PostBuilderFunc;
+}
+
+interface Company {
+    name: string;
+    logoImgSrc: string;
 }
 
 interface JobPostData {
@@ -29,11 +36,11 @@ interface JobPostData {
     contentImgSrc: string; // main picture (ideally some gif)
     startDate: string; // start / end dates used as normal text caption
     endDate: string;
-    achievements: Array<string>; // comments
-    skills: Array<string>; // hashtags
+    achievements: string[]; // comments
+    skills: string[]; // hashtags
 }
 
-class JobPost {
+class JobPost implements PostBuilder {
     
     jobPostData: JobPostData;
 
