@@ -4,3 +4,13 @@
 /* Your own custom component styles */
 
 @import 'tailwindcss/utilities';
+
+@layer components {
+    .nav-btn {
+        @apply hidden h-8 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-100 ease-out
+    }
+
+    .post-btn {
+        @apply h-7 hover:scale-125 cursor-pointer transition-all ease-out;
+    }
+}
