@@ -59,8 +59,8 @@ class JobPost implements PostBuilder {
         return {
             id: (Math.random() + 1).toString(36).substring(7),
             postHeader: {
-                title: this.jobPostData.company.name,
-                subtitle: this.jobPostData.title,
+                title: this.jobPostData.title,
+                subtitle: this.jobPostData.company.name,
                 date: dateString,
                 logoSrc: this.jobPostData.company.logoImgSrc
             },

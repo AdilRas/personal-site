@@ -1,17 +1,8 @@
 import { BookmarkIcon, ChatIcon, DotsHorizontalIcon, EmojiHappyIcon, HeartIcon, PaperAirplaneIcon } from '@heroicons/react/outline';
 import { MouseEvent, useState } from 'react';
 import { Post as PostData } from '../../../models/feed/posts/Post';
-import Posts from './Posts';
+import Hashtag from './Hashtag';
 
-const Hashtag = ({text} : {text : string}) => {
-
-    return (
-        <div className=' text-[rgb(6,69,173)] pr-1'>
-            {`#${text.toLowerCase()}`}
-        </div>
-    );
-
-}
 
 const Post = ({ post } : {post : PostData}) => {
 
@@ -26,21 +17,31 @@ const Post = ({ post } : {post : PostData}) => {
         <div className='bg-white my-7 border rounded-sm'>
 
             {/* USER photo - {username _ location} - options dots */}
-            <div className='flex items-center p-5'>
+            <div className='flex items-center px-5 py-3 w-full'>
+
+                {/* Post author image */}
                 <img src={post.postHeader.logoSrc} className="w-12 h-12 rounded-full object-contain border p-1 mr-3" />
-                <div className='flex-1'>
-                    <p className='font-semibold text-xl'>{post.postHeader.title}</p>
-                    <p className='text-lg'>{post.postHeader.subtitle}</p>
+
+                {/* Title, subtitle, date */}
+                <div className='flex justify-between flex-wrap items-center w-full'>
+                    {/* Title & Subtitle */}
+                    <div>
+                        <p className='font-semibold text-lg leading-none lg:leading-7'>
+                            {post.postHeader.title}
+                        </p>
+                        <p className=''>
+                            {post.postHeader.subtitle}
+                        </p>
+                    </div>
+
+                    {/* Date */}
+                    <p className='leading-none text-gray-500'>{post.postHeader.date}</p>
                 </div>
-                <p>{post.postHeader.date}</p>
-                {/* <DotsHorizontalIcon className='h-5' /> */}
             </div>
 
             {/* actual post */}
             <img src={post.contentImgSrc} className='object-cover w-full' />
-            <div>
 
-            </div>
             {/* actions (like, comment, share) - bookmark*/}
             <div className='flex justify-between px-4 pt-4'>
                 <div className='flex space-x-4'>
@@ -52,12 +53,12 @@ const Post = ({ post } : {post : PostData}) => {
             </div>
 
             {/* Caption */}
-            <div className='flex flex-col justify-center py-5 pl-5 truncate'>
-                <p className=''>
+            <div className='flex flex-col justify-center pt-4 pb-2 pl-5'>
+                <p className='flex flex-wrap'>
                     <span className='font-semibold mr-1'>{post.nameForCaption}</span>
                     {post.captionText}
                 </p>
-                <div className='flex'>
+                <div className='flex flex-wrap'>
                     {
                         post.hashtags &&
                         post.hashtags.length > 0 &&
