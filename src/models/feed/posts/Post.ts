@@ -1,5 +1,7 @@
 interface PostHeader {
-    name: string;
+    title: string;
+    subtitle: string;
+    date: string;
     logoSrc: string;
 }
 
@@ -47,17 +49,22 @@ class JobPost implements PostBuilder {
     public constructor(postData: JobPostData) {
         this.jobPostData = postData;
     }
-    
+
     public toPost(): Post {
+        
+        const dateString: string = `${this.jobPostData.startDate} - ${this.jobPostData.endDate}`;
+
         return {
             id: (Math.random() + 1).toString(36).substring(7),
             postHeader: {
-                name: this.jobPostData.company.name,
+                title: this.jobPostData.company.name,
+                subtitle: this.jobPostData.title,
+                date: dateString,
                 logoSrc: this.jobPostData.company.logoImgSrc
             },
             contentImgSrc: this.jobPostData.contentImgSrc,
             nameForCaption: this.jobPostData.title,
-            captionText: `${this.jobPostData.startDate} - ${this.jobPostData.endDate}`,
+            captionText: dateString,
             hashtags: this.jobPostData.skills,
             comments: this.jobPostData.achievements
         };

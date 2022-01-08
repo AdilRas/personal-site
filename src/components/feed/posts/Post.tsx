@@ -17,8 +17,12 @@ const Post = ({ post } : {post : PostData}) => {
             {/* USER photo - {username _ location} - options dots */}
             <div className='flex items-center p-5'>
                 <img src={post.postHeader.logoSrc} className="w-12 h-12 rounded-full object-contain border p-1 mr-3" />
-                <p className='flex-1 font-semibold'>{post.postHeader.name}</p>
-                <DotsHorizontalIcon className='h-5' />
+                <div className='flex-1'>
+                    <p className='font-semibold text-xl'>{post.postHeader.title}</p>
+                    <p className='text-lg'>{post.postHeader.subtitle}</p>
+                </div>
+                <p>{post.postHeader.date}</p>
+                {/* <DotsHorizontalIcon className='h-5' /> */}
             </div>
 
             {/* actual post */}
