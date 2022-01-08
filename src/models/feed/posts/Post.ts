@@ -18,6 +18,8 @@ export interface Post {
     readonly hashtags?: string[];
     // comments
     readonly comments?: string[];
+
+    readonly helpLink?: Link;
 }
 
 interface PostBuilderFunc {
@@ -32,6 +34,11 @@ interface Company {
     logoImgSrc: string;
 }
 
+interface Link {
+    link: string;
+    text: string;
+}
+
 export interface JobPostData {
     company: Company; // top bar with pic & name comes from this
     title: string; // Bolded part of caption
@@ -44,8 +51,21 @@ export interface JobPostData {
     skills: string[]; // hashtags
 }
 
+export interface ServicePostData {
+    company: Company;
+    title: string;
+    imgsrc: string;
+    startDate: string;
+    endDate: string;
+    location: string;
+    roleType: string;
+    achievements: string[];
+    skills: string[];
+    learnMore?: Link;
+}
+
 class JobPost implements PostBuilder {
-    
+
     jobPostData: JobPostData;
 
     public constructor(postData: JobPostData) {
@@ -53,7 +73,7 @@ class JobPost implements PostBuilder {
     }
 
     public toPost(): Post {
-        
+
         const dateString: string = `${this.jobPostData.startDate} - ${this.jobPostData.endDate}`;
 
         return {
@@ -73,4 +93,33 @@ class JobPost implements PostBuilder {
     }
 }
 
-export {JobPost};
+class ServicePost implements PostBuilder {
+    postData: ServicePostData;
+
+    public constructor(postData: ServicePostData) {
+        this.postData = postData;
+    }
+
+    public toPost(): Post {
+
+        const dateString: string = `${this.postData.startDate} - ${this.postData.endDate}`;
+
+        return {
+            id: (Math.random() + 1).toString(36).substring(7),
+            postHeader: {
+                title: this.postData.title,
+                subtitle: this.postData.company.name,
+                date: dateString,
+                logoSrc: this.postData.company.logoImgSrc
+            },
+            contentImgSrc: this.postData.imgsrc,
+            nameForCaption: this.postData.roleType ?? "Community Service",
+            captionText: this.postData.location ?? "Remote",
+            hashtags: this.postData.skills,
+            comments: this.postData.achievements,
+            helpLink: this.postData.learnMore
+        };
+    }
+}
+
+export { JobPost, ServicePost };

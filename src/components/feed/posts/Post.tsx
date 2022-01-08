@@ -13,6 +13,8 @@ const Post = ({ post } : {post : PostData}) => {
         alert("Sign in as Admin to submit comments...");
     }
 
+    const [isHover, setHover] = useState(false);
+
     return (
         <div className='bg-white my-7 border rounded-sm'>
 
@@ -40,7 +42,17 @@ const Post = ({ post } : {post : PostData}) => {
             </div>
 
             {/* actual post */}
-            <img src={post.contentImgSrc} className='object-cover w-full' />
+            <div className='relative' onMouseEnter={() => {setHover(true);}} onMouseLeave={() => {setHover(false);}}>
+                <img src={post.contentImgSrc} className='object-cover w-full' />
+                {
+                    isHover && post.helpLink && 
+                    <div className='absolute bottom-0 w-full bg-opacity-50 bg-black text-white'>
+                        <a className='underline px-2' href={post.helpLink.link} target='_blank'>
+                            {`${post.helpLink.text} »`}
+                        </a>
+                    </div>
+                }
+            </div>
 
             {/* actions (like, comment, share) - bookmark*/}
             <div className='flex justify-between px-4 pt-4'>
