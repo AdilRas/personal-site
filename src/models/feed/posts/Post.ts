@@ -3,7 +3,7 @@ interface PostHeader {
     logoSrc: string;
 }
 
-interface Post {
+export interface Post {
     // unique identifier
     readonly id: string;
     // header
@@ -30,9 +30,9 @@ interface Company {
     logoImgSrc: string;
 }
 
-interface JobPostData {
-    title: string; // Bolded part of caption
+export interface JobPostData {
     company: Company; // top bar with pic & name comes from this
+    title: string; // Bolded part of caption
     contentImgSrc: string; // main picture (ideally some gif)
     startDate: string; // start / end dates used as normal text caption
     endDate: string;
@@ -44,6 +44,10 @@ class JobPost implements PostBuilder {
     
     jobPostData: JobPostData;
 
+    public constructor(postData: JobPostData) {
+        this.jobPostData = postData;
+    }
+    
     public toPost(): Post {
         return {
             id: (Math.random() + 1).toString(36).substring(7),
@@ -59,3 +63,5 @@ class JobPost implements PostBuilder {
         };
     }
 }
+
+export {JobPost};
