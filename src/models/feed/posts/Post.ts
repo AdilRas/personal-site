@@ -35,6 +35,8 @@ interface Company {
 export interface JobPostData {
     company: Company; // top bar with pic & name comes from this
     title: string; // Bolded part of caption
+    team?: string;
+    location?: string;
     contentImgSrc: string; // main picture (ideally some gif)
     startDate: string; // start / end dates used as normal text caption
     endDate: string;
@@ -63,8 +65,8 @@ class JobPost implements PostBuilder {
                 logoSrc: this.jobPostData.company.logoImgSrc
             },
             contentImgSrc: this.jobPostData.contentImgSrc,
-            nameForCaption: this.jobPostData.title,
-            captionText: dateString,
+            nameForCaption: this.jobPostData.team ?? "Team TBD",
+            captionText: this.jobPostData.location ?? "Remote",
             hashtags: this.jobPostData.skills,
             comments: this.jobPostData.achievements
         };

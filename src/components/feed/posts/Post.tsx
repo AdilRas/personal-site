@@ -1,6 +1,17 @@
 import { BookmarkIcon, ChatIcon, DotsHorizontalIcon, EmojiHappyIcon, HeartIcon, PaperAirplaneIcon } from '@heroicons/react/outline';
 import { MouseEvent, useState } from 'react';
 import { Post as PostData } from '../../../models/feed/posts/Post';
+import Posts from './Posts';
+
+const Hashtag = ({text} : {text : string}) => {
+
+    return (
+        <div className=' text-[rgb(6,69,173)] pr-1'>
+            {`#${text.toLowerCase()}`}
+        </div>
+    );
+
+}
 
 const Post = ({ post } : {post : PostData}) => {
 
@@ -41,23 +52,31 @@ const Post = ({ post } : {post : PostData}) => {
             </div>
 
             {/* Caption */}
-            <p className='p-5 truncate'>
-                <span className='font-semibold mr-1'>{post.nameForCaption}</span>
-                {post.captionText}
-            </p>
+            <div className='flex flex-col justify-center py-5 pl-5 truncate'>
+                <p className=''>
+                    <span className='font-semibold mr-1'>{post.nameForCaption}</span>
+                    {post.captionText}
+                </p>
+                <div className='flex'>
+                    {
+                        post.hashtags &&
+                        post.hashtags.length > 0 &&
+                        post.hashtags.map(hashtag => <Hashtag text={hashtag} />)
+                    }
+                </div>
+            </div>
 
             {/* Comments */}
             {(post.comments && post.comments.length > 0 && (
-                <div className='ml-5 h-36 overflow-y-scroll hover:scrollbar-thumb-gray-300 scrollbar-thin'>
-                    {post.comments.map(comment => (
-                        <div key={(Math.random() + 1).toString(36).substring(7)} className='flex items-start space-x-2 mb-3'>
-                            {/* <img className='h-8 rounded-full' src={comment.userimg} alt="" /> */}s
-                            <div className='flex'>
-                                <p className='leading-5'>{comment}</p>
-                            </div>
-                        </div>
-                    )
-                    )}
+                <div className='ml-5 pr-5 overflow-y-scroll max-h-36 hover:scrollbar-thumb-gray-300 scrollbar-thin'>
+                    <ul className='list-disc list-inside'>
+                        {post.comments.map(comment => (
+                            <li key={(Math.random() + 1).toString(36).substring(7)}>
+                                {comment}
+                            </li>
+                        )
+                        )}
+                    </ul>
                 </div>
             )) || <p className='ml-5 mb-5 text-gray-400'>No comments...</p>}
 

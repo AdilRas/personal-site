@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Posts from "./posts/Posts";
+import MiniProfile from "./sidebar/MiniProfile";
 import Stories from "./stories/Stories";
 
 function Feed() {
@@ -14,8 +15,10 @@ function Feed() {
             </section>
 
             <section className="hidden xl:inline-grid md:col-span-1">
-                {/* <MiniProfile /> */}
-                {/* <Suggestions /> */}
+                <div className="fixed top-20">
+                    <MiniProfile />
+                    {/* <Suggestions /> */}
+                </div>
             </section>
         </main>
     );
