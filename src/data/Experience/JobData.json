@@ -1,0 +1,175 @@
+[
+    {
+        "company": {
+            "name": "Snap, Inc.",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Incoming Software Engineer Intern",
+        "contentImgSrc": "snap.gif",
+        "startDate": "Sept 2022",
+        "endDate": "Dec 2022",
+        "achievements": [
+            "I will be completing a co-op at Snap this Fall."
+        ],
+        "skills": [
+            "Incoming"
+        ]
+    },
+    {
+        "company": {
+            "name": "Texas A&M University",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Teaching Assistant | CSCE 430 - Problem Solving Strategies",
+        "contentImgSrc": "tamu.svg",
+        "startDate": "Jan 2022",
+        "endDate": "Present",
+        "achievements": [
+            "Holding weekly office hours for students to ask questions and get assistance with algorithmic implementations to solve complex problems.",
+            "Providing support for students in weekly competitions",
+            "Assisting in creation of weekly problem sets spanning various topics such as Dynamic Programming, Max Flow, Math and Geometry."
+        ],
+        "skills": [
+            "Problem Solving",
+            "Communication",
+            "Teaching"
+        ]
+    },
+    {
+        "company": {
+            "name": "Amazon.com",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Software Development Engineer Intern",
+        "contentImgSrc": "amazon-corgi.gif",
+        "startDate": "May 2021",
+        "endDate": "Aug 2021",
+        "achievements": [
+            "Identified a pain point with internal navigation and developed a functional proof of concept with AWS Lambda estimated to save $50 to $75 million per year if implemented across engineering teams.",
+            "Created CI/CD pipeline and hand off documentation to ensure development can continue without service outage.",
+            "Designed and implemented a parallelized algorithm in Java with Native AWS (Lambda, Step Functions, S3) to perform diffs using object checksums for certain Alexa data structures, reducing diff time up to 80%.",
+            "Provisioned auto-scaling cloud resources for both projects with AWS CDK."
+        ],
+        "skills": [
+            "Java",
+            "AWS",
+            "S3",
+            "Lambda",
+            "Step Functions",
+            "Parallel Computing",
+            "Document Database"
+        ]
+    },
+    {
+        "company": {
+            "name": "Facebook",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Software Engineer Intern",
+        "contentImgSrc": "fb-meta-gif.gif",
+        "startDate": "Jan 2021",
+        "endDate": "Apr 2021",
+        "achievements": [
+            "Researched needs, designed, and implemented a dashboard with Hack (php) and XHP to display insights to significantly reduce the time needed to address customer tickets escalating to our team.",
+            "Created automated data pipeline with Python and SQL to cache data collected daily for useful metrics.",
+            "Designed and implemented functionality for deserialization and retrieval of aforementioned data.",
+            "Optimized use of internal logging services to decrease server load for ads integrity software."
+        ],
+        "skills": [
+            "Hack (PHP)",
+            "Python",
+            "SQL",
+            "Highly Available Cache",
+            "Data Pipelines"
+        ]
+    },
+    {
+        "company": {
+            "name": "Visa, Inc.",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Software Engineer Intern",
+        "contentImgSrc": "visa.png",
+        "startDate": "May 2020",
+        "endDate": "Jul 2020",
+        "achievements": [
+            "Automated generation of JSON test data for an application using Python, saving multiple hours of manual work.",
+            "Developed interface for viewing spreadsheet data using Angular.",
+            "Designed and integrated REST API endpoints to modify spreadsheet data using Apache POI and Java SpringBoot",
+            "Researched, analyzed and implemented linear time algorithm to efficiently find differences between spreadsheets",
+            "Earned maximum level of recommendation at end-of-term evaluation for strong communication, teamwork and performance."
+        ],
+        "skills": [
+            "Angular",
+            "Python",
+            "TypeScript",
+            "REST API",
+            "SpringBoot",
+            "Asymptotic Analysis",
+            "Agile Software Development"
+        ]
+    },
+    {
+        "company": {
+            "name": "Prime Communications, LP.",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Business Process Automation Intern",
+        "contentImgSrc": "prime-logo-full.jpg",
+        "startDate": "May 2019",
+        "endDate": "Aug 2019",
+        "achievements": [
+            "Developed 5 internal programs using Selenium framework and Apache POI for Java to automate daily report generation and reduce developer workload by 10%, or 300 hours / year.",
+            "Took initiative to automate the verification of millions of rows of Excel data to identify discrepancies in key reports.",
+            "Wrote SQL queries to search and filter data to inform the design of upcoming projects."
+        ],
+        "skills": [
+            "Java",
+            "Apache POI",
+            "Selenium",
+            "SQL",
+            "Excel"
+        ]
+    },
+    {
+        "company": {
+            "name":"ITREB for USA",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Software Development and IT Intern",
+        "contentImgSrc": "itreb.jpg",
+        "startDate": "Jul 2018",
+        "endDate": "Aug 2018",
+        "achievements": [
+            "Used MVC methodology with ASP.NET framework to contribute to web-facing employee management application.",
+            "Debugged and created SQL queries to search and filter data for a web-facing volunteer management interface"
+        ],
+        "skills": [
+            "C#",
+            "PHP",
+            "SQL",
+            "ASP.NET",
+            "MVC Methodology"
+        ]
+    },
+    {
+        "company": {
+            "name":"Code Ninjas",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Code Sensei (Instructor)",
+        "contentImgSrc": "codeninjas.png",
+        "startDate": "Aug 2018",
+        "endDate": "Jan 2019",
+        "achievements": [
+            "Delivered engaging lessons on programming fundamentals in Scratch and JavaScript to help kids develop a passion for computer science."
+        ],
+        "skills": [
+            "JavaScript",
+            "Scratch",
+            "Customer Acquisition",
+            "Communication",
+            "Teaching"
+        ]
+    }
+]
