@@ -1,0 +1,88 @@
+[
+    {
+        "company" : {
+            "name": "TAMUhack",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Director",
+        "imgsrc": "tamuhack.svg",
+        "startDate": "Mar 2020",
+        "endDate": "Present",
+        "location": "College Station, TX",
+        "roleType": "Leadership Role",
+        "achievements": [
+            "Part of a team that coordinates and hosts the largest student run hackathon in the state of Texas.",
+            "Developed features for Django registration system called Ouroboros used by other hackathons nationwide.",
+            "Deployed registration system to Heroku. Available at https://register.tamuhack.com/",
+            "Goal: Provide an inclusive, judegement-free environment for students to pursue and develop a passion for coding."
+        ],
+        "skills": [
+            "Django",
+            "Python",
+            "Heroku",
+            "AWS"
+        ],
+        "learnMore": {
+            "link": "https://tamuhack.com/",
+            "text": "Visit Site"
+        }
+    },
+    {
+        "company": {
+            "name": "Aggie Competitive Programming Club",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Logistics Chairman and Co-Founder",
+        "imgsrc": "acpc.svg",
+        "startDate": "May 2020",
+        "endDate": "Present",
+        "location": "College Station, TX",
+        "roleType": "Leadership Role",
+        "achievements": [
+            "Assisted in the process of making gaining university recognition as an official student organization.",
+            "Coordinated meetings for officers to plan curriculum for the semester and come up with action items for officers.",
+            "Created cloud storage drive for the organization and developed an organization system for important documents.",
+            "Goal: Provide a productive environment for people of any skill level to learn competitive programming and expand their problem solving skills."
+        ],
+        "skills": [
+            "Teamwork",
+            "Coordination",
+            "Leadership",
+            "Organization"
+        ],
+        "learnMore": {
+            "link": "https://tamuacpc.com/",
+            "text": "Visit Site"
+        },
+        "links": [
+            {
+                "link": "https://tamuacpc.com/",
+                "text": "View Site"
+            },
+            {
+                "link": "https://tinyurl.com/acpcdiscord/",
+                "text": "Discord"
+            }
+        ]
+    },
+    {
+        "company": {
+            "name": "Youth Expanding Services",
+            "logoImgSrc": "adil-new.jpg"
+        },
+        "title": "Service Award",
+        "imgsrc": "yes.png",
+        "startDate": "August 2015",
+        "endDate": "May 2019",
+        "location": "Houston, TX",
+        "roleType": "Community Service",
+        "achievements": [
+            "Contributed more than 100 hours of community service to various organizations throughout high school.",
+            "Goal: To promote character and the ability to serve the community; to build a positive attitude and working relationship with the community."
+        ],
+        "skills": [
+            "Community Service",
+            "Volunteerism"
+        ]
+    }
+]
