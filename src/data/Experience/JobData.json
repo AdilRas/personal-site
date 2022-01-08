@@ -8,6 +8,7 @@
         "contentImgSrc": "snap.gif",
         "startDate": "Sept 2022",
         "endDate": "Dec 2022",
+        "location": "Los Angeles, CA",
         "achievements": [
             "I will be completing a co-op at Snap this Fall."
         ],
@@ -24,6 +25,8 @@
         "contentImgSrc": "tamu.svg",
         "startDate": "Jan 2022",
         "endDate": "Present",
+        "team": "Texas A&M Engineering",
+        "location": "College Station, TX",
         "achievements": [
             "Holding weekly office hours for students to ask questions and get assistance with algorithmic implementations to solve complex problems.",
             "Providing support for students in weekly competitions",
@@ -44,6 +47,8 @@
         "contentImgSrc": "amazon-corgi.gif",
         "startDate": "May 2021",
         "endDate": "Aug 2021",
+        "team": "Alexa AI - Natural Language Understanding",
+        "location": "Seattle, WA",
         "achievements": [
             "Identified a pain point with internal navigation and developed a functional proof of concept with AWS Lambda estimated to save $50 to $75 million per year if implemented across engineering teams.",
             "Created CI/CD pipeline and hand off documentation to ensure development can continue without service outage.",
@@ -69,6 +74,8 @@
         "contentImgSrc": "fb-meta-gif.gif",
         "startDate": "Jan 2021",
         "endDate": "Apr 2021",
+        "team": "Business Integrity Infra",
+        "location": "Seattle, WA (Remote)",
         "achievements": [
             "Researched needs, designed, and implemented a dashboard with Hack (php) and XHP to display insights to significantly reduce the time needed to address customer tickets escalating to our team.",
             "Created automated data pipeline with Python and SQL to cache data collected daily for useful metrics.",
@@ -90,6 +97,8 @@
         },
         "title": "Software Engineer Intern",
         "contentImgSrc": "visa.png",
+        "team": "Billing and Incentives Platform",
+        "location": "Austin, TX (Remote)",
         "startDate": "May 2020",
         "endDate": "Jul 2020",
         "achievements": [
@@ -116,6 +125,8 @@
         },
         "title": "Business Process Automation Intern",
         "contentImgSrc": "prime-logo-full.jpg",
+        "team": "Business Ops",
+        "location": "Sugar Land, TX",
         "startDate": "May 2019",
         "endDate": "Aug 2019",
         "achievements": [
@@ -138,6 +149,8 @@
         },
         "title": "Software Development and IT Intern",
         "contentImgSrc": "itreb.jpg",
+        "team": "",
+        "location": "Sugar Land, TX",
         "startDate": "Jul 2018",
         "endDate": "Aug 2018",
         "achievements": [
@@ -161,6 +174,8 @@
         "contentImgSrc": "codeninjas.png",
         "startDate": "Aug 2018",
         "endDate": "Jan 2019",
+        "team": "Student Facing Instruction",
+        "location": "Sugar Land, TX",
         "achievements": [
             "Delivered engaging lessons on programming fundamentals in Scratch and JavaScript to help kids develop a passion for computer science."
         ],
